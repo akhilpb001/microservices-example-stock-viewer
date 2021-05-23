@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: db-service
+  datasource:
+    url: jdbc:h2:file:/Users/apb/stock
+    driverClassName: org.h2.Driver
+    username: admin
+    password: admin
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+server:
+  port: 8081
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8083/eureka/
+  instance:
+    hostname: localhost
